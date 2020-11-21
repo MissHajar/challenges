@@ -1,35 +1,46 @@
 # QA engineering challenge Part 1 Consent Notice Automated tests
 
 <br />
+
 ## Tech Stack 
 <br />
+
 * Platform: Windows 10
 * IDE: Visual Studio Code
 * E2E Tests Framework: TestCafé
+
 <br />
+
 I used protractor long ago, but I'm eager to have new technical skills, so I had to choose between TestCafé and cypress.io.
 I've chosen TestCafé not only because I love coffee but also because it has a more extended browsers coverage than cypress.io.
 TestCafe also :
 * handles well Flakiness thanks to his wait mechanisms for assertions and selectors
 * has a Parallel Mode and Headless Mode
 * has a CI compatibility with Jenkins, Teamcity, Travis, GitHub Actions …
+
 <br />
+
 This page also helped me decide :
 https://js.libhunt.com/compare-testcafe-vs-protractor
 
 <br />
-I encountered some difficulties when I wanted to close the window to reload it. It seemed it's a known limitation.
+
+I've encountered some difficulties when I wanted to close the window to reload it. It seemed it's a known limitation.
 https://devexpress.github.io/testcafe/documentation/guides/advanced-guides/multiple-browser-windows.html
+
 <br />
 
 ### Deliverables
 <br />
+
 The project delivered has 4 tests suites (e2e_tests directory):
 1. Load Consent Notice
 2. Agree/Decline Consent Notice
 3. Close Consent Notice
 4. Validate some Get/Post HTTP requests
+
 <br />
+
 ## Specifications Tests Coverage Matrix
 <br />
 
@@ -40,6 +51,7 @@ Specifications for creating an automated tests suites that validate the correct 
 4. Validate that the notice gets closed
 5. Validate that an HTTP POST request is sent to `https://api.privacy-center.org/v1/events` with `type = consent.given`
 6. Validate that the function `Didomi.getUserConsentStatusForAll()` (<https://developers.didomi.io/cmp/web-sdk/reference/api#getuserconsentstatusforall>) responds with the correct values
+
 <br /><br />
 <table>
 <th>
@@ -200,7 +212,9 @@ In a terminal, go to the project directory and execute:
 ```
 ./TestAllBrowsers.sh
 ```
+
 <br />
+
 This will call testcafe command for each browser and create separate reports for each such as edge.html, firefox.html,....
 Can take some time especially because of some browsers such as safari and ie that may cause Testcafe failure.
 
@@ -209,10 +223,13 @@ Can take some time especially because of some browsers such as safari and ie tha
 #### Gulp
 <br />
 
-1. In a terminal, go to the project directory and execute:
+* In a terminal, go to the project directory and execute:
+
 ```
 gulp runAllTests
 ```
+
+<br />
 
 This will call testcafe command for every browsers and mobile devices. It generates:
   *  headlessReport.html : browsers runned in headless mode
@@ -220,19 +237,28 @@ This will call testcafe command for every browsers and mobile devices. It genera
   *  appleReport.html : Apple devices
   *  androidReport.html : Android Devices
 
-2. To run only for desktop,
+* To run only for desktop,
 ```
 gulp runDesktopTests
 ```
-3. To run only for mobile,
+
+<br />
+
+* To run only for mobile,
 ```
 gulp runMobileTests
 ```
-4. Other gulp tasks are available:
+
+<br />
+
+* Other gulp tasks are available, get tasks list:
 ```
 gulp --tasks
 ```
-Linter, Minifier, Transpiler ...
+
+<br />
+
+Tasks such as Linter, Minifier, Transpiler, runappletests ...
 
 <br />
 
