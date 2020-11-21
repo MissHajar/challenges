@@ -199,7 +199,11 @@ Tablet (chrome:emulated):
 
 ### Prerequisites
 <br />
-
+Node.js and NPM should be available.<br />
+Node_modules dependancies will be installed with:
+```
+$ ./Setup.sh
+```
 
 <br />
 
@@ -210,7 +214,7 @@ Tablet (chrome:emulated):
 <br />
 In a terminal, go to the project directory and execute:
 ```
-./TestAllBrowsers.sh
+$ ./TestAllBrowsers.sh
 ```
 
 <br />
@@ -226,7 +230,7 @@ Can take some time especially because of some browsers such as safari and ie tha
 * In a terminal, go to the project directory and execute:
 
 ```
-gulp runAllTests
+$ gulp runAllTests
 ```
 
 <br />
@@ -239,21 +243,21 @@ This will call testcafe command for every browsers and mobile devices. It genera
 
 * To run only for desktop,
 ```
-gulp runDesktopTests
+$ gulp runDesktopTests
 ```
 
 <br />
 
 * To run only for mobile,
 ```
-gulp runMobileTests
+$ gulp runMobileTests
 ```
 
 <br />
 
 * Other gulp tasks are available, get tasks list:
 ```
-gulp --tasks
+$ gulp --tasks
 ```
 
 <br />
