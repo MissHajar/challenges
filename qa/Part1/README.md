@@ -266,7 +266,7 @@ $ gulp --tasks
 
 <br />
 
-Tasks such as Linter, Minifier, Transpiler, runappletests ...
+Tasks for JS optimization (Linter, Minifier,..) and to run specifics Tests (runappletests ...)
 
 <br />
 
