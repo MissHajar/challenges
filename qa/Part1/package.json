@@ -1,0 +1,53 @@
+{
+  "name": "notice-e2e",
+  "version": "1.0.0",
+  "description": "End to end test for Consent Notice",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@babel/core": "^7.12.7",
+    "@babel/register": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-minify": "^3.1.0",
+    "package.json": "^2.0.1",
+    "testcafe": "^1.9.4",
+    "testcafe-reporter-st-html": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-testcafe": "^1.1.0",
+    "package.json": "^2.0.1",
+    "testcafe": "^1.9.4",
+    "testcafe-reporter-st-html": "^1.0.0"
+  },
+  "scripts": {
+    "test": "./TestAllBrowsers.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MissHajar/challenges.git"
+  },
+  "keywords": [
+    "Challenge",
+    "QA",
+    "Consent",
+    "Notice"
+  ],
+  "author": "Hajar ZAROUAL",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/MissHajar/challenges/issues"
+  },
+  "homepage": "https://github.com/MissHajar/challenges#readme"
+}

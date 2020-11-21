@@ -1,0 +1,20 @@
+{
+    "containers":{
+        "consentNoticeInitial": "div.didomi-popup-view",
+        "exitPopup": "#close-final-popup-disagree",
+        "demoButton":"#hs-cta-wrapper-89772318-d12b-4370-ba71-1582b483cebc",
+        "homepageNavBar" :"#body > div.innerWrapper > div.main-wrap.headerComp"
+    },
+    "buttons":{
+        "learnMore":"#didomi-notice-learn-more-button",
+        "agree":"#didomi-notice-agree-button",
+        "deny":"#didomi-notice-disagree-button",
+        "agreeConfirm":"#footerlinkclose-final-popup-agree",
+        "denyConfirm":"#footerlinkclose-final-popup-disagree",
+        "cross":"#didomi-popup > div > div > div > a",
+        "crossConfirm" : "#close-final-popup-disagree",
+        "denyAll":"#didomi-consent-popup > div > div > div > div > div.didomi-consent-popup-footer.didomi-popup-footer > div > button.didomi-components-button.didomi-button.didomi-button-standard.standard-button",
+        "agreeToAll":"#didomi-consent-popup > div > div > div > div > div.didomi-consent-popup-footer.didomi-popup-footer > div > button.didomi-components-button.didomi-button.didomi-components-button--color.didomi-button-highlight.highlight-button",
+        "partnersList":"#didomi-consent-popup > div > div > div > div > div.didomi-consent-popup-body.didomi-popup-body > span > button"
+    }
+}
