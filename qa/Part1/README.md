@@ -199,7 +199,11 @@ Tablet (chrome:emulated):
 
 ### Prerequisites
 <br />
-Node.js and NPM should be available.<br />
+
+Node.js and NPM should be available.
+
+<br />
+
 Node_modules dependancies will be installed with:
 ```
 $ ./Setup.sh
