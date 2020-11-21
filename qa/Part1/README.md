@@ -1,40 +1,46 @@
 # QA engineering challenge Part 1 Consent Notice Automated tests
 
-
+<br />
 ## Tech Stack 
-
+<br />
 * Platform: Windows 10
 * IDE: Visual Studio Code
 * E2E Tests Framework: TestCafé
-
+<br />
 I used protractor long ago, but I'm eager to have new technical skills, so I had to choose between TestCafé and cypress.io.
-I've chosen TestCafé not only because I love coffee but also it has a more extended browsers coverage than cypress.io.
+I've chosen TestCafé not only because I love coffee but also because it has a more extended browsers coverage than cypress.io.
 TestCafe also :
-* handles well Flakiness
+* handles well Flakiness thanks to his wait mechanisms for assertions and selectors
 * has a Parallel Mode and Headless Mode
 * has a CI compatibility with Jenkins, Teamcity, Travis, GitHub Actions …
-
+<br />
 This page also helped me decide :
 https://js.libhunt.com/compare-testcafe-vs-protractor
 
+<br />
+I encountered some difficulties when I wanted to close the window to reload it. It seemed it's a known limitation.
+https://devexpress.github.io/testcafe/documentation/guides/advanced-guides/multiple-browser-windows.html
+<br />
 
 ### Deliverables
-
+<br />
 The project delivered has 4 tests suites (e2e_tests directory):
 1. Load Consent Notice
-2. Agree/Refuse Consent Notice
+2. Agree/Decline Consent Notice
 3. Close Consent Notice
 4. Validate some Get/Post HTTP requests
-
+<br />
 ## Specifications Tests Coverage Matrix
-Specifications for creating an automate test suite that validates the correct behavior of the notice was :
+<br />
+
+Specifications for creating an automated tests suites that validate the correct behavior of the notice was :
 1. Go to <https://www.didomi.io/>
 2. Validate that the notice is present
 3. Give consent by clicking on "Agree and Close"
 4. Validate that the notice gets closed
 5. Validate that an HTTP POST request is sent to `https://api.privacy-center.org/v1/events` with `type = consent.given`
 6. Validate that the function `Didomi.getUserConsentStatusForAll()` (<https://developers.didomi.io/cmp/web-sdk/reference/api#getuserconsentstatusforall>) responds with the correct values
-
+<br /><br />
 <table>
 <th>
     <td>Covered Spec ID</td>
@@ -148,9 +154,10 @@ Specifications for creating an automate test suite that validates the correct be
     <td>Get the Didomi object to call User Content Status, and check that purposes and vendors are enabled</td>
 </tr>
 </table>
-
+<br /><br />
 
 ## Browser / Mobile Device Tests Coverage
+<br />
 
 Browsers:
 * Chrome
@@ -161,29 +168,42 @@ Browsers:
 * IE
 * Safari
 
+<br />
 
 Mobile Device (chrome:emulated):
-* iPhoneX, iPhone 5, iPhone6/7/8, iPhone6/7/8Plus
-* Galaxy Fold, Galaxy S5, Nexus 6, Nexus 10
+* iPhoneX, 
+* iPhone 5, iPhone6/7/8, iPhone6/7/8Plus: only in gulp
+* Galaxy Fold, Galaxy S5, Nexus 6, Nexus 10: only in gulp
+
+<br />
 
 Tablet (chrome:emulated):
-* iPad, iPad Pro
+* iPad, iPad Pro (only in gulp)
+
+<br />
 
 ## Run tests
 ### Prerequisites
+<br />
 
+
+<br />
 
 ### Usage
+<br />
 
 #### Shell Script
+<br />
 In a terminal, go to the project directory and execute:
 ```
 ./TestAllBrowsers.sh
 ```
 This will call testcafe command for each browser and create separate reports for each such as edge.html, firefox.html,....
 Can take some time especially because of some browsers such as safari and ie that may cause Testcafe failure.
+<br />
 
 #### Gulp
+<br />
 1. In a terminal, go to the project directory and execute:
 ```
 gulp runAllTests
@@ -205,7 +225,9 @@ gulp runMobileTests
 ```
 gulp --tasks
 ```
-
+Linter, Minifier, Transpiler ...
+<br />
 
 #### VS Code
+<br />
 Get VS code TestCafe extension.
