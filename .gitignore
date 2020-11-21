@@ -1,5 +1,5 @@
-node_modules
-reports
+qa/Part1/node_modules
+qa/Part1/reports
 *.docx
 qa/Part1/.vscode/settings.json
 qa/Part1/didomi.code-workspace
