@@ -183,6 +183,8 @@ Tablet (chrome:emulated):
 <br />
 
 ## Run tests
+<br />
+
 ### Prerequisites
 <br />
 
@@ -198,26 +200,31 @@ In a terminal, go to the project directory and execute:
 ```
 ./TestAllBrowsers.sh
 ```
+<br />
 This will call testcafe command for each browser and create separate reports for each such as edge.html, firefox.html,....
 Can take some time especially because of some browsers such as safari and ie that may cause Testcafe failure.
+
 <br />
 
 #### Gulp
 <br />
+
 1. In a terminal, go to the project directory and execute:
 ```
 gulp runAllTests
 ```
+
 This will call testcafe command for every browsers and mobile devices. It generates:
   *  headlessReport.html : browsers runned in headless mode
   *  Report.html : browsers 
   *  appleReport.html : Apple devices
   *  androidReport.html : Android Devices
-2. To run only for desktop, run
+
+2. To run only for desktop,
 ```
 gulp runDesktopTests
 ```
-3. To run only for mobile, run
+3. To run only for mobile,
 ```
 gulp runMobileTests
 ```
@@ -226,6 +233,7 @@ gulp runMobileTests
 gulp --tasks
 ```
 Linter, Minifier, Transpiler ...
+
 <br />
 
 #### VS Code
